@@ -1,13 +1,24 @@
+@import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght,YOPQ@100..900,300&family=Red+Hat+Text:ital,wght@0,300..700;1,300..700&display=swap");
+
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
 body {
   background: linear-gradient(180deg, #b068e9 0%, #6463e7 100%);
   min-height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
+  font-family: "Kumbh Sans", sans-serif;
+  padding: 20px;
+  padding-top: 100px;
 }
 
 .main_div {
-  width: 920px;
+  max-width: 920px;
+  width: 100%;
   height: 509px;
   position: relative;
   background-color: white;
@@ -16,22 +27,12 @@ body {
   align-items: center;
   border-radius: 23px;
   gap: 70px;
-}
-
-.img_box {
-  width: 472;
-  height: 359;
-  position: relative;
-}
-
-.mail_img {
-  position: absolute;
-  top: 141px;
-  left: -92px;
+  padding-right: 200px;
 }
 
 .second_div {
-  width: 350px;
+  max-width: 350px;
+  width: 100%;
   min-height: 380px;
   display: flex;
   justify-content: start;
@@ -41,11 +42,81 @@ body {
 }
 
 .box_div {
-  width: 350px;
+  max-width: 350px;
+  width: 220%;
   height: 35px;
   display: flex;
   justify-content: center;
   align-items: start;
   flex-direction: column;
   border-bottom: 1px solid #e8e8ea;
+  gap: 10px;
+  padding-bottom: 10px;
+}
+
+.heading {
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 100%;
+  letter-spacing: 0px;
+  color: #1e1f36;
+}
+
+.author {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 100%;
+  letter-spacing: 0px;
+  color: #4b4c5f;
+}
+
+.quote {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 18px;
+  letter-spacing: 0px;
+  color: #787887;
+}
+
+.author:hover {
+  color: #f47b56;
+  cursor: pointer;
+}
+
+.img {
+  max-width: 472px;
+  width: 100%;
+  height: 359px;
+}
+
+.img_phone {
+  display: none;
+}
+
+@media (max-width: 790px) {
+  .img {
+    display: none;
+  }
+
+  .box_div {
+    width: 120%;
+  }
+
+  .img_phone {
+    top: -120px;
+    left: 25%;
+    display: block;
+    position: absolute;
+  }
+
+  .main_div {
+    padding: 100px;
+  }
+}
+
+@media (max-width: 430px) {
+  .img_phone {
+    top: -120px;
+    left: 12%;
+  }
 }
