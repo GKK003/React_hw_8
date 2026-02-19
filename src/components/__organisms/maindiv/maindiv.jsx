@@ -5,50 +5,44 @@ import { Fetch } from "../../../fetch/fetch";
 import { useEffect, useState } from "react";
 export function MainDiv() {
   const [data, setData] = useState([]);
+  const [change, setChange] = useState("none");
+  const [height, setHeight] = useState();
 
-  (useEffect(() => {
+  useEffect(() => {
     Fetch(setData);
-  }),
-    []);
+  }, []);
+
   return (
     <>
-      <ul>
-        {data.map((el, key) => {
-          return <li key={key}>{el.title}</li>;
-        })}
-      </ul>
-
       <div className="main_div">
         <div className="img_box">
           <img src={MainImg} />
           <img className="mail_img" src={MailBox} />
         </div>
         <div className="second_div">
-          <Text class="heading" text="Products" />
-
-          <div className="box_div">
-            <Text class="question" text="" />
-            <Text class="answer" text="" />
-          </div>
-
-          <div className="box_div">
-            <Text class="question" text="" />
-            <Text class="answer" text="" />
-          </div>
-
-          <div className="box_div">
-            <Text class="question" text="" />
-            <Text class="answer" text="" />
-          </div>
-
-          <div className="box_div">
-            <Text class="question" text="" />
-            <Text class="answer" text="" />
-          </div>
-          <div className="box_div">
-            <Text class="question" text="" />
-            <Text class="answer" text="" />
-          </div>
+          <Text class="heading" text="Quotes" />
+          {data.slice(0, 5).map((quotes) => (
+            <div
+              className="box_div"
+              style={{
+                height: height,
+              }}
+              key={quotes.id}
+              onClick={() => {
+                setChange("block");
+                setHeight("50px");
+              }}
+            >
+              <Text class="question" text={quotes.author} />
+              <Text
+                class="answer"
+                style={{
+                  display: change,
+                }}
+                text={quotes.quote}
+              />
+            </div>
+          ))}
         </div>
       </div>
     </>
