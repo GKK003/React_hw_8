@@ -1,0 +1,51 @@
+body {
+  background: linear-gradient(180deg, #b068e9 0%, #6463e7 100%);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.main_div {
+  width: 920px;
+  height: 509px;
+  position: relative;
+  background-color: white;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  border-radius: 23px;
+  gap: 70px;
+}
+
+.img_box {
+  width: 472;
+  height: 359;
+  position: relative;
+}
+
+.mail_img {
+  position: absolute;
+  top: 141px;
+  left: -92px;
+}
+
+.second_div {
+  width: 350px;
+  min-height: 380px;
+  display: flex;
+  justify-content: start;
+  align-items: start;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.box_div {
+  width: 350px;
+  height: 35px;
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  flex-direction: column;
+  border-bottom: 1px solid #e8e8ea;
+}
