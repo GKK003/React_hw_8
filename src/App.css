@@ -95,6 +95,10 @@ body {
 }
 
 @media (max-width: 872px) {
+  body {
+    min-height: 130vh;
+  }
+
   .box_div {
     width: 250%;
   }
