@@ -12,8 +12,10 @@ body {
   justify-content: center;
   align-items: center;
   font-family: "Kumbh Sans", sans-serif;
-  padding: 20px;
-  padding-top: 100px;
+  padding-left: 20px;
+  padding-right: 20px;
+
+  padding-top: 120px;
 }
 
 .main_div {
@@ -95,10 +97,6 @@ body {
 }
 
 @media (max-width: 872px) {
-  body {
-    min-height: 130vh;
-  }
-
   .box_div {
     width: 250%;
   }
