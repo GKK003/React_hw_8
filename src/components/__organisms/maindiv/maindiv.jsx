@@ -8,7 +8,6 @@ import Arrow from "../../../assets/arrow.png";
 export function MainDiv() {
   const [data, setData] = useState([]);
   const [clickedBox, setClickedBox] = useState();
-  const [rotate, setRotate] = useState();
 
   useEffect(() => {
     Fetch(setData);
@@ -24,7 +23,10 @@ export function MainDiv() {
           <Text class="heading" text="Quotes" />
           <div
             className="box_div"
-            style={{ height: clickedBox === 1 ? "70px" : "35px" }}
+            style={{
+              height: clickedBox === 1 ? "70px" : "35px",
+              transition: "height 0.3s ease",
+            }}
             onClick={() => {
               setClickedBox(1);
             }}
@@ -57,7 +59,10 @@ export function MainDiv() {
 
           <div
             className="box_div"
-            style={{ height: clickedBox === 2 ? "110px" : "35px" }}
+            style={{
+              height: clickedBox === 2 ? "110px" : "35px",
+              transition: "height 0.3s ease",
+            }}
             onClick={() => {
               setClickedBox(2);
             }}
@@ -89,7 +94,10 @@ export function MainDiv() {
 
           <div
             className="box_div"
-            style={{ height: clickedBox === 3 ? "85px" : "35px" }}
+            style={{
+              height: clickedBox === 3 ? "85px" : "35px",
+              transition: "height 0.3s ease",
+            }}
             onClick={() => setClickedBox(3)}
           >
             <Text
@@ -120,7 +128,10 @@ export function MainDiv() {
 
           <div
             className="box_div"
-            style={{ height: clickedBox === 4 ? "80px" : "35px" }}
+            style={{
+              height: clickedBox === 4 ? "80px" : "35px",
+              transition: "height 0.3s ease",
+            }}
             onClick={() => setClickedBox(4)}
           >
             <Text
@@ -151,7 +162,10 @@ export function MainDiv() {
 
           <div
             className="box_div"
-            style={{ height: clickedBox === 5 ? "85px" : "35px" }}
+            style={{
+              height: clickedBox === 5 ? "85px" : "35px",
+              transition: "height 0.3s ease",
+            }}
             onClick={() => setClickedBox(5)}
           >
             <Text
