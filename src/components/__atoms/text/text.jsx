@@ -1,7 +1,11 @@
 export function Text(props) {
   return (
     <>
-      <p className={props.class} style={props.style}>
+      <p
+        className={props.class}
+        onMouseEnter={props.onMouse}
+        style={props.style}
+      >
         {props.text}
       </p>
     </>

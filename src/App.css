@@ -27,7 +27,7 @@ body {
   align-items: center;
   border-radius: 23px;
   gap: 70px;
-  padding-right: 200px;
+  padding-right: 350px;
 }
 
 .second_div {
@@ -43,7 +43,7 @@ body {
 
 .box_div {
   max-width: 350px;
-  width: 220%;
+  width: 300%;
   height: 35px;
   display: flex;
   justify-content: center;
@@ -52,6 +52,7 @@ body {
   border-bottom: 1px solid #e8e8ea;
   gap: 10px;
   padding-bottom: 10px;
+  position: relative;
 }
 
 .heading {
@@ -91,6 +92,12 @@ body {
 
 .img_phone {
   display: none;
+}
+
+@media (max-width: 872px) {
+  .box_div {
+    width: 250%;
+  }
 }
 
 @media (max-width: 790px) {
